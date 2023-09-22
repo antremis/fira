@@ -77,7 +77,7 @@ const onTaskAdded = (div) => {
 
 const changeEditBtn = (div) => {
     let src = div.querySelector('.btns .edit').src
-    if(src === 'http://127.0.0.1:5500/assets/pen.png') div.querySelector('.btns .edit').src = './assets/save.png'
+    if(src === 'https://fira-pearl.vercel.app/assets/pen.png') div.querySelector('.btns .edit').src = './assets/save.png'
     else div.querySelector('.btns .edit').src = './assets/pen.png'
 }
 
@@ -119,7 +119,7 @@ const deleteTask = (div) => {
 const updateTask = (div) => {
     changeEditBtn(div)
     toggleInputs(div)
-    if(div.querySelector('.btns .edit').src === 'http://127.0.0.1:5500/assets/save.png') return
+    if(div.querySelector('.btns .edit').src === 'https://fira-pearl.vercel.app/assets/save.png') return
     const data = {
         title: div.querySelector('.inputs .title').value,
         description: div.querySelector('.inputs .description').value,
@@ -135,7 +135,7 @@ const updateTask = (div) => {
 
 const onTaskComplete = (div) => {
     const src = div.querySelector('.btns .done').src
-    if(src === 'http://127.0.0.1:5500/assets/check_blue.png') div.querySelector('.btns .done').src = './assets/check_green.png'
+    if(src === 'https://fira-pearl.vercel.app/assets/check_blue.png') div.querySelector('.btns .done').src = './assets/check_green.png'
     else div.querySelector('.btns .done').src = './assets/check_blue.png'
     const {i, status} = findDivIndex(div)
     console.log(i, status)
